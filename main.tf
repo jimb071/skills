@@ -1,3 +1,12 @@
+locals {
+  name = "skills"
+
+  tags = {
+    Project = "Skills assessment https://github.com/jimb071/skills"
+    Terraform = "True"
+  }
+}
+
 terraform {
   required_providers {
     aws = {
