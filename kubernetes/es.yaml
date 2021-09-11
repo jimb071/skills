@@ -1,11 +1,20 @@
 apiVersion: v1
-kind: Pod
+kind: Deployment
 metadata:
   name: es
   labels:
     app: es
 
 spec:
-  containers:
-    - name: es
-      image: elasticsearch
+  replicas: 1
+  selector:
+    matchLabels:
+      app: es
+  template:
+    metadata:
+      labels:
+        app: es
+    spec:
+      containers:
+        - name: es
+          image: elasticsearch
