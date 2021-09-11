@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: skills-deployment
+  labels:
+    tier: front-end
+spec:
+  template:
+    metadata:
+      name: nginx
+      labels:
+        app: skills
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+  replicas: 1
+  selector:
+    matchLabels:
+      app: skills

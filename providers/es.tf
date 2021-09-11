@@ -16,7 +16,7 @@ resource "aws_elasticsearch_domain" "skills_server" {
   ebs_options {
     ebs_enabled = "true"
     volume_type = "gp2"
-    volume_size = "10"
+    volume_size = "5"
   }
 
 access_policies = <<CONFIG
