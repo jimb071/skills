@@ -1,3 +1,3 @@
 - need to provide a better method of storing credentials, currently using hard-coded credentials in separate file. Use environment variables.
 - use a firewall in front of nginx server, or some other way of not exposing it directly to the internet
-
+- restrict IAMs roles to be more specific rather than using an admin role
