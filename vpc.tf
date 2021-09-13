@@ -11,7 +11,7 @@ resource "aws_vpc" "main" {
 
   # optional
   tags = {
-    Name = locals.tags
+    Name = "main"
   }
 }
 
